@@ -1,76 +1,81 @@
-# khajiit-has-houses
-_"Travelers of Skyrim, welcome. Khajiit offers fine homes in every hold. Safe, clean, and free of skeevers... mostly."_
+# KhajiitHasHouses app
 
-🐾 Khajiit Has Houses is a Python-based hotel (or house) reservation system inspired by the world of Skyrim. Built using Object-Oriented Programming and the Flet library for a modern graphical interface, this project simulates a house rental service run by enterprising Khajiit across the province.
+## Run the app
 
-## 📌 Features
+### uv
 
-- Manage guests (hóspedes)
-- Manage Skyrim houses (quartos)
-- Create, view, and cancel reservations
-- Track house availability
-- Skyrim map & lore-based UI elements *(coming soon)*
+Run as a desktop app:
 
-## 🧱 Project Structure
+```
+uv run flet run
+```
 
-### Main Classes
+Run as a web app:
 
-- `Hospede`: Stores client data
-- `Casa`: Represents a house (name, city, price, type, availability)
-- `Reserva`: Reservation contract (house, guest, dates)
-- `GuildaCorretores`: Manages reservations and availability
+```
+uv run flet run --web
+```
 
-### Technologies
+### Poetry
 
-- **Language**: Python
-- **GUI**: Flet
-- **Architecture**: OOP
-- **Persistence**: In-memory (for now)
+Install dependencies from `pyproject.toml`:
 
-## 🎮 Skyrim Houses Included
+```
+poetry install
+```
 
-| House             | Town       | Type     | Price per day    |
-|-------------------|------------|----------|------------------|
-| Breezehome        | Whiterun   | Padrão   | 100              |
-| Hjerim            | Windhelm   | Luxo     | 250              |
-| Proudspire Manor  | Solitude   | Luxo     | 300              |
-| Vlindrel Hall     | Markarth   | Rústico  | 180              |
-| Honeyside         | Riften     | Padrão   | 150              |
-| Severin Manor     | Raven Rock | Especial | 0 (quest house)  |
+Run as a desktop app:
 
-## 🔮 Future Plans
+```
+poetry run flet run
+```
 
-- 📍 Interactive map of Skyrim with clickable locations
-- 🧙 Lore-based tooltips for houses
-- ☁️ Save/load system (JSON or database)
-- 🎨 Themed UI with Elder Scrolls visuals
+Run as a web app:
 
----
+```
+poetry run flet run --web
+```
 
-## 📅 Development Time Tracker
+For more details on running the app, refer to the [Getting Started Guide](https://flet.dev/docs/getting-started/).
 
-| Day | Date       | Task Summary                             | Time Spent | Done |
-|-----|------------|-------------------------------------------|------------|------|
-| 1   | 2025-05-08 | Project planning, repo setup, README prep | `~2h`      | ✅   |
-| 2   | YYYY-MM-DD | Class creation & structure                | `--`       | ⬜    |
-| 3   | YYYY-MM-DD | Sample data, house list, testing logic    | `--`       | ⬜    |
-| 4   | YYYY-MM-DD | Basic UI: house list + buttons            | `--`       | ⬜    |
-| 5   | YYYY-MM-DD | Client management screen                  | `--`       | ⬜    |
-| 6   | YYYY-MM-DD | Reservation system + date handling        | `--`       | ⬜    |
-| 7   | YYYY-MM-DD | Reservation view, cancel, polish          | `--`       | ⬜    |
+## Build the app
 
----
+### Android
 
-## ✅ Progress Checklist
+```
+flet build apk -v
+```
 
-- [x] Repository created
-- [x] README written (title, description, theme)
-- [ ] Classes implemented
-- [ ] GUI layout built
-- [ ] Data integration (houses + guests)
-- [ ] Full reservation system working
-- [ ] Project tested and delivered
+For more details on building and signing `.apk` or `.aab`, refer to the [Android Packaging Guide](https://flet.dev/docs/publish/android/).
 
----
+### iOS
 
-> Made with 🧠, 🐾, and a bit of skooma.
+```
+flet build ipa -v
+```
+
+For more details on building and signing `.ipa`, refer to the [iOS Packaging Guide](https://flet.dev/docs/publish/ios/).
+
+### macOS
+
+```
+flet build macos -v
+```
+
+For more details on building macOS package, refer to the [macOS Packaging Guide](https://flet.dev/docs/publish/macos/).
+
+### Linux
+
+```
+flet build linux -v
+```
+
+For more details on building Linux package, refer to the [Linux Packaging Guide](https://flet.dev/docs/publish/linux/).
+
+### Windows
+
+```
+flet build windows -v
+```
+
+For more details on building Windows package, refer to the [Windows Packaging Guide](https://flet.dev/docs/publish/windows/).
